@@ -1,0 +1,63 @@
+.wrapper{
+    width: 600px;
+    margin: 0 auto;
+}
+.img-box .img{
+    display: block;
+    position: fixed;
+    z-index: -1;
+    width: 1300px;
+    top: -200px;
+    left: 10%;
+}
+.form{
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.form .item-margin{
+    margin-top: 10px;
+}
+.form .title{
+    font-size: 25px;
+    color: #ffd157;
+}
+.form .label{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 130px;
+    text-align: right;
+}
+.form input:not([type="radio"]){
+    width: 300px;
+    padding-left: 5px;
+    height: 25px;
+}
+.form input.error{
+    border: 1px solid #ffda44;
+    box-shadow: inset 0 0 0 1px #ffda44;
+}
+.form input::placeholder{
+    font-size: 12px;
+    color: #a8a8a8;
+}
+.form .submit{
+    height: 60px;
+}
+.form #register{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #ffda44;
+    border: none;
+    border-radius: 5px;
+}
+.form span{
+    font-size: 12px;
+    color: #ffbd4e;
+}

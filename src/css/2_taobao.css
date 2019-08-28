@@ -1,0 +1,1181 @@
+/**
+ * @Description:
+ * @author YugiAsuna
+ * @date 2019/7/30
+*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+* :root,
+* body {
+  background-color: #f5f5f5;
+}
+* a {
+  color: #6c6c6c;
+}
+* b {
+  font-weight: normal;
+}
+* p,
+* ul {
+  margin-bottom: 0;
+}
+.wrapper .top-nav {
+  width: 1190px;
+  height: 35px;
+  margin: 0 auto;
+}
+.wrapper .top-nav .left-login {
+  float: left;
+}
+.wrapper .top-nav .left-login ul li {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+}
+.wrapper .top-nav .left-login ul li a {
+  font-size: 12px;
+}
+.wrapper .top-nav .left-login ul li .lg-rg {
+  height: 35px;
+  line-height: 38px;
+  margin: 0 6px;
+}
+.wrapper .top-nav .left-login ul li .lg-rg a {
+  float: left;
+  margin-right: 7px;
+}
+.wrapper .top-nav .left-login ul li .lg-rg a .top-login {
+  color: #ff4400;
+}
+.wrapper .top-nav .right-nav {
+  float: right;
+}
+.wrapper .top-nav .right-nav ul li {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 6px;
+}
+.wrapper .top-nav .right-nav ul li a {
+  float: left;
+  font-size: 12px;
+  padding: 0 6px;
+}
+.wrapper .top-nav .right-nav ul li .top-nav-line {
+  color: #ddd;
+  font-size: 12px;
+  vertical-align: 8px;
+}
+.wrapper .top-nav .right-nav ul li .shopping-cart,
+.wrapper .top-nav .right-nav ul li .collect,
+.wrapper .top-nav .right-nav ul li .web-nav {
+  float: left;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 11px 6px 0;
+  background-size: 100%;
+}
+.wrapper .top-nav .right-nav ul li .shopping-cart {
+  background-image: url("../images/shopping-cart.png");
+}
+.wrapper .top-nav .right-nav ul li .collect {
+  background-image: url("../images/collect.png");
+}
+.wrapper .top-nav .right-nav ul li .web-nav {
+  background-image: url("../images/web-nav.png");
+  width: 8px;
+  height: 8px;
+  margin: 13px 6px 0;
+}
+.wrapper .top-nav .right-nav ul li .icon-list-down {
+  float: left;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-top: 13px;
+  margin-right: 2px;
+  background-image: url("../images/icon-list-down.png");
+  background-size: 100%;
+}
+.wrapper .top-nav .right-nav ul ::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.wrapper .top-nav .right-nav ul .myTao,
+.wrapper .top-nav .right-nav ul .myCollect,
+.wrapper .top-nav .right-nav ul .myShopCenter,
+.wrapper .top-nav .right-nav ul .myService,
+.wrapper .top-nav .right-nav ul .myWebNav {
+  position: relative;
+}
+.wrapper .top-nav .right-nav ul .myTao.active,
+.wrapper .top-nav .right-nav ul .myCollect.active,
+.wrapper .top-nav .right-nav ul .myShopCenter.active,
+.wrapper .top-nav .right-nav ul .myService.active,
+.wrapper .top-nav .right-nav ul .myWebNav.active {
+  background-color: #ffffff;
+}
+.wrapper .top-nav .right-nav ul .myTao .myTao-title.active,
+.wrapper .top-nav .right-nav ul .myCollect .myTao-title.active,
+.wrapper .top-nav .right-nav ul .myShopCenter .myTao-title.active,
+.wrapper .top-nav .right-nav ul .myService .myTao-title.active,
+.wrapper .top-nav .right-nav ul .myWebNav .myTao-title.active,
+.wrapper .top-nav .right-nav ul .myTao .myCollect-title.active,
+.wrapper .top-nav .right-nav ul .myCollect .myCollect-title.active,
+.wrapper .top-nav .right-nav ul .myShopCenter .myCollect-title.active,
+.wrapper .top-nav .right-nav ul .myService .myCollect-title.active,
+.wrapper .top-nav .right-nav ul .myWebNav .myCollect-title.active,
+.wrapper .top-nav .right-nav ul .myTao .shop-center-title.active,
+.wrapper .top-nav .right-nav ul .myCollect .shop-center-title.active,
+.wrapper .top-nav .right-nav ul .myShopCenter .shop-center-title.active,
+.wrapper .top-nav .right-nav ul .myService .shop-center-title.active,
+.wrapper .top-nav .right-nav ul .myWebNav .shop-center-title.active,
+.wrapper .top-nav .right-nav ul .myTao .myService-title.active,
+.wrapper .top-nav .right-nav ul .myCollect .myService-title.active,
+.wrapper .top-nav .right-nav ul .myShopCenter .myService-title.active,
+.wrapper .top-nav .right-nav ul .myService .myService-title.active,
+.wrapper .top-nav .right-nav ul .myWebNav .myService-title.active,
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-title.active,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-title.active,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-title.active,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-title.active,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-title.active {
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ffffff;
+  z-index: 999;
+}
+.wrapper .top-nav .right-nav ul .myTao .myTao-list,
+.wrapper .top-nav .right-nav ul .myCollect .myTao-list,
+.wrapper .top-nav .right-nav ul .myShopCenter .myTao-list,
+.wrapper .top-nav .right-nav ul .myService .myTao-list,
+.wrapper .top-nav .right-nav ul .myWebNav .myTao-list,
+.wrapper .top-nav .right-nav ul .myTao .myCollect-list,
+.wrapper .top-nav .right-nav ul .myCollect .myCollect-list,
+.wrapper .top-nav .right-nav ul .myShopCenter .myCollect-list,
+.wrapper .top-nav .right-nav ul .myService .myCollect-list,
+.wrapper .top-nav .right-nav ul .myWebNav .myCollect-list,
+.wrapper .top-nav .right-nav ul .myTao .shop-center-list,
+.wrapper .top-nav .right-nav ul .myCollect .shop-center-list,
+.wrapper .top-nav .right-nav ul .myShopCenter .shop-center-list,
+.wrapper .top-nav .right-nav ul .myService .shop-center-list,
+.wrapper .top-nav .right-nav ul .myWebNav .shop-center-list,
+.wrapper .top-nav .right-nav ul .myTao .myService-list,
+.wrapper .top-nav .right-nav ul .myCollect .myService-list,
+.wrapper .top-nav .right-nav ul .myShopCenter .myService-list,
+.wrapper .top-nav .right-nav ul .myService .myService-list,
+.wrapper .top-nav .right-nav ul .myWebNav .myService-list {
+  position: absolute;
+  white-space: nowrap;
+  top: 35px;
+  z-index: 998;
+  background-color: #ffffff;
+  padding: 6px 0;
+  border: 1px solid #eee;
+}
+.wrapper .top-nav .right-nav ul .myTao .myTao-list li,
+.wrapper .top-nav .right-nav ul .myCollect .myTao-list li,
+.wrapper .top-nav .right-nav ul .myShopCenter .myTao-list li,
+.wrapper .top-nav .right-nav ul .myService .myTao-list li,
+.wrapper .top-nav .right-nav ul .myWebNav .myTao-list li,
+.wrapper .top-nav .right-nav ul .myTao .myCollect-list li,
+.wrapper .top-nav .right-nav ul .myCollect .myCollect-list li,
+.wrapper .top-nav .right-nav ul .myShopCenter .myCollect-list li,
+.wrapper .top-nav .right-nav ul .myService .myCollect-list li,
+.wrapper .top-nav .right-nav ul .myWebNav .myCollect-list li,
+.wrapper .top-nav .right-nav ul .myTao .shop-center-list li,
+.wrapper .top-nav .right-nav ul .myCollect .shop-center-list li,
+.wrapper .top-nav .right-nav ul .myShopCenter .shop-center-list li,
+.wrapper .top-nav .right-nav ul .myService .shop-center-list li,
+.wrapper .top-nav .right-nav ul .myWebNav .shop-center-list li,
+.wrapper .top-nav .right-nav ul .myTao .myService-list li,
+.wrapper .top-nav .right-nav ul .myCollect .myService-list li,
+.wrapper .top-nav .right-nav ul .myShopCenter .myService-list li,
+.wrapper .top-nav .right-nav ul .myService .myService-list li,
+.wrapper .top-nav .right-nav ul .myWebNav .myService-list li {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 5px;
+  margin: 0;
+  font-size: 12px;
+  color: #6c6c6c;
+  cursor: pointer;
+}
+.wrapper .top-nav .right-nav ul .myTao .myTao-list li:hover,
+.wrapper .top-nav .right-nav ul .myCollect .myTao-list li:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .myTao-list li:hover,
+.wrapper .top-nav .right-nav ul .myService .myTao-list li:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .myTao-list li:hover,
+.wrapper .top-nav .right-nav ul .myTao .myCollect-list li:hover,
+.wrapper .top-nav .right-nav ul .myCollect .myCollect-list li:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .myCollect-list li:hover,
+.wrapper .top-nav .right-nav ul .myService .myCollect-list li:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .myCollect-list li:hover,
+.wrapper .top-nav .right-nav ul .myTao .shop-center-list li:hover,
+.wrapper .top-nav .right-nav ul .myCollect .shop-center-list li:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .shop-center-list li:hover,
+.wrapper .top-nav .right-nav ul .myService .shop-center-list li:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .shop-center-list li:hover,
+.wrapper .top-nav .right-nav ul .myTao .myService-list li:hover,
+.wrapper .top-nav .right-nav ul .myCollect .myService-list li:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .myService-list li:hover,
+.wrapper .top-nav .right-nav ul .myService .myService-list li:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .myService-list li:hover {
+  background-color: #f5f5f5;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  white-space: nowrap;
+  top: 35px;
+  right: 0;
+  width: 1190px;
+  z-index: 998;
+  background-color: #ffffff;
+  padding: 0 0 6px;
+  border: 1px solid #eee;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area {
+  width: 25%;
+  padding: 5px;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area h4,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area h4,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area h4,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area h4,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px;
+  overflow: hidden;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area h4.title-1,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area h4.title-1,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area h4.title-1,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area h4.title-1,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area h4.title-1 {
+  color: #fc4200;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area h4.title-2,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area h4.title-2,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area h4.title-2,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area h4.title-2,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area h4.title-2 {
+  color: #9fb838;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area h4.title-3,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area h4.title-3,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area h4.title-3,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area h4.title-3,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area h4.title-3 {
+  color: #d75696;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area h4.title-4,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area h4.title-4,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area h4.title-4,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area h4.title-4,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area h4.title-4 {
+  color: #2e9fdb;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area li,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area li,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area li,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area li,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area li {
+  float: left;
+  height: 25px;
+  line-height: 25px;
+  padding-top: 5px;
+  margin: 0;
+  font-size: 12px;
+  overflow: hidden;
+  color: #3c3c3c;
+  cursor: pointer;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area li a,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area li a,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area li a,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area li a,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area li a {
+  position: relative;
+  color: #3c3c3c;
+  margin: 0 2px;
+  padding: 0 8px;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area li a:hover,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area li a:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area li a:hover,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area li a:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area li a:hover {
+  color: #ffffff;
+  border-radius: 4px;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area li a .new,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area li a .new,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area li a .new,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area li a .new,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area li a .new {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 9px;
+  height: 14px;
+  overflow: hidden;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area li a .hot,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area li a .hot {
+  background: url("//img.alicdn.com/tps/i2/T1hOy5XhNnXXXXXXXX-9-14.gif") no-repeat;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area li a .new,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area li a .new,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area li a .new,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area li a .new,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area li a .new {
+  background: url("//img.alicdn.com/tps/i3/T1lni5XhXXXXXXXXXX-9-14.gif") no-repeat;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area:not(:last-of-type),
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area:not(:last-of-type),
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area:not(:last-of-type),
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area:not(:last-of-type),
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area:not(:last-of-type) {
+  border-right: 1px solid #eee;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area.area-1 a:hover,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area.area-1 a:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area.area-1 a:hover,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area.area-1 a:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area.area-1 a:hover {
+  background-color: #f50;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area.area-2 a:hover,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area.area-2 a:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area.area-2 a:hover,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area.area-2 a:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area.area-2 a:hover {
+  background-color: #a0b959;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area.area-3 a:hover,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area.area-3 a:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area.area-3 a:hover,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area.area-3 a:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area.area-3 a:hover {
+  background-color: #df61ab;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area.area-4 a:hover,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area.area-4 a:hover,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area.area-4 a:hover,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area.area-4 a:hover,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area.area-4 a:hover {
+  background-color: #52a0e5;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area.column-4 li,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area.column-4 li,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area.column-4 li,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area.column-4 li,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area.column-4 li {
+  width: 24%;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area.column-3 li,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area.column-3 li,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area.column-3 li,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area.column-3 li,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area.column-3 li {
+  width: 33%;
+}
+.wrapper .top-nav .right-nav ul .myTao .myWebNav-list .myWebNav-list-area.column-2 li,
+.wrapper .top-nav .right-nav ul .myCollect .myWebNav-list .myWebNav-list-area.column-2 li,
+.wrapper .top-nav .right-nav ul .myShopCenter .myWebNav-list .myWebNav-list-area.column-2 li,
+.wrapper .top-nav .right-nav ul .myService .myWebNav-list .myWebNav-list-area.column-2 li,
+.wrapper .top-nav .right-nav ul .myWebNav .myWebNav-list .myWebNav-list-area.column-2 li {
+  width: 49%;
+}
+.wrapper .top-nav .right-nav .active:hover {
+  color: #ff4400;
+}
+.wrapper .top-nav .right-nav ::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.wrapper .user {
+  width: 100%;
+  height: 354px;
+  background-color: #ffd84d;
+  margin-bottom: 30px;
+}
+@keyframes bgImg {
+  0% {
+    background-image: url("../images/user-bg-1.png");
+  }
+  30% {
+    background-image: url("../images/user-bg-2.png");
+  }
+  60% {
+    background-image: url("../images/user-bg-3.png");
+  }
+  90% {
+    background-image: url("../images/user-bg-4.png");
+  }
+  100% {
+    background-image: url("../images/user-bg-1.png");
+  }
+}
+.wrapper .user .content {
+  position: relative;
+  width: 1040px;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url("../images/user-bg.png");
+}
+.wrapper .user .content .user-top {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+}
+.wrapper .user .content .user-top .logo {
+  float: left;
+  position: absolute;
+  width: 72px;
+  height: 40px;
+  top: calc(50% - 20px);
+  background-image: url("../images/logo.png");
+  background-size: 100% 100%;
+}
+.wrapper .user .content .user-top .nav {
+  position: absolute;
+  height: 20px;
+  line-height: 20px;
+  top: calc(50% - 10px);
+  right: 160px;
+}
+.wrapper .user .content .user-top .nav a {
+  float: left;
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 60px;
+}
+.wrapper .user .content .user-top .nav a .main-page {
+  padding: 0 0 3px 0;
+  border-bottom: 1.5px solid #222;
+}
+.wrapper .user .content .user-top .nav .my-xian {
+  position: relative;
+}
+.wrapper .user .content .user-top .nav .my-xian .my-xian-list {
+  position: absolute;
+  width: 90px;
+  left: -10px;
+  border-radius: 0 0 4px 4px;
+  background-color: #ffffff;
+  border: 1px solid #ededed;
+  z-index: 998;
+}
+.wrapper .user .content .user-top .nav .my-xian .my-xian-list .my-xian-list-item {
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+  padding-left: 8px;
+}
+.wrapper .user .content .user-top .nav .my-xian .my-xian-list .my-xian-list-item p {
+  float: left;
+}
+.wrapper .user .content .user-top .nav .my-xian .my-xian-list .my-xian-list-item p.item-text {
+  font-size: 12px;
+  color: #222;
+  font-weight: 400;
+  margin-right: 10px;
+}
+.wrapper .user .content .user-top .nav .my-xian .my-xian-list .my-xian-list-item p.item-num {
+  font-size: 12px;
+  font-weight: 400;
+  color: #f44;
+}
+.wrapper .user .content .user-top .nav .my-xian .my-xian-list .my-xian-list-item:not(:last-of-type) {
+  border-bottom: 0.5px solid #ededed;
+}
+.wrapper .user .content .user-top .nav .my-xian .my-xian-title span::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid #000;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.wrapper .user .content .user-top .nav .my-xian .my-xian-title span.active::after {
+  border: 5px solid #000;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  vertical-align: 3px;
+}
+.wrapper .user .content .user-top ::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.wrapper .user .content .user-message {
+  position: absolute;
+  width: 370px;
+  height: 225px;
+  right: 0;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.wrapper .user .content .user-message .unlogin-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 46px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background-image: url("../images/login-icon.png");
+  background-size: 100% 100%;
+}
+.wrapper .user .content .user-message .please-login {
+  width: 130px;
+  height: 32px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 32px;
+  background-color: #ffd84d;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+.wrapper .user .content .user-message .register {
+  text-align: center;
+  font-size: 10px;
+}
+.wrapper .user .content .user-message .register a {
+  cursor: pointer;
+}
+.wrapper .user .content .user-message .welcome {
+  display: none;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+.wrapper .user .content .user-message .quit {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #7a7a7a;
+  cursor: pointer;
+}
+.wrapper .main-sale {
+  display: flex;
+  align-items: center;
+  width: 1040px;
+  height: 110px;
+  margin: 0 auto;
+  padding-left: 92px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+.wrapper .main-sale .taobaoDirect,
+.wrapper .main-sale .publish {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.wrapper .main-sale .taobaoDirect img,
+.wrapper .main-sale .publish img {
+  float: left;
+  width: 56px;
+  height: 56px;
+}
+.wrapper .main-sale .taobaoDirect div,
+.wrapper .main-sale .publish div {
+  float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.wrapper .main-sale .taobaoDirect div .title,
+.wrapper .main-sale .publish div .title {
+  height: 25px;
+  line-height: 25px;
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+}
+.wrapper .main-sale .taobaoDirect div .content,
+.wrapper .main-sale .publish div .content {
+  margin-top: 2px;
+  font-size: 12px;
+}
+.wrapper .main-sale .taobaoDirect ::after,
+.wrapper .main-sale .publish ::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.wrapper .main-sale .publish {
+  right: 0;
+}
+.wrapper .main-sale .line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1px;
+  height: 42px;
+  background-color: #e6e6e6;
+  margin: 0 90px;
+}
+.wrapper .shop-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1040px;
+  height: 60px;
+  background-color: #ffd84d;
+  margin: 0 auto 10px;
+  box-sizing: border-box;
+  padding-left: 60px;
+  border-radius: 4px;
+}
+.wrapper .shop-nav ul .shop-item {
+  float: left;
+  height: 33px;
+  line-height: 33px;
+  margin-right: 45px;
+  font-family: Tahoma;
+  color: #222;
+  cursor: pointer;
+}
+.wrapper .shop-nav ul .shop-item.active {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #222;
+}
+.wrapper .shop-nav ul::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.wrapper .shop-list {
+  width: 1040px;
+  margin: 0 auto 20px;
+}
+.wrapper .shop-list .shop-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item {
+  display: block;
+  width: 200px;
+  height: 330px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .item-img {
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  border-radius: 4px 4px 0 0;
+  background-size: 100% 100%;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .item-info {
+  width: 170px;
+  margin: 10px 15px 0;
+  padding-bottom: 14px;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid #e6e6e6;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .item-info p {
+  font-size: 13px;
+  height: 40px;
+  line-height: 20px;
+  color: #222;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .item-info .price {
+  font-size: 0;
+  margin-top: 5px;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .item-info .price .price-unit {
+  font-size: 10px;
+  color: #f44;
+  height: 14px;
+  line-height: 22px;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .item-info .price .price-value {
+  font-size: 16px;
+  color: #f44;
+  height: 18px;
+  line-height: 18px;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .item-info .price .want {
+  float: right;
+  font-size: 10px;
+  color: #888;
+  height: 14px;
+  line-height: 14px;
+  max-width: 90px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line {
+  display: flex;
+  width: 200px;
+  height: 43px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line .user-info {
+  width: 170px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line .user-info .user-icon,
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line .user-info .user-id,
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line .user-info .user-credit {
+  float: left;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line .user-info .user-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line .user-info .user-id {
+  width: 80px;
+  height: 17px;
+  line-height: 17px;
+  font-size: 12px;
+  color: #222;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line .user-info .user-credit {
+  width: 87px;
+  height: 12.5px;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item .user-line .user-info::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.wrapper .shop-list .shop-list-wrapper .shop-item:nth-of-type(5n+5) {
+  margin-right: 0;
+}
+.wrapper .page-change {
+  display: flex;
+  justify-content: center;
+  width: 1040px;
+  height: 32px;
+  margin: 0 auto 40px;
+}
+.wrapper .page-change .turn-page {
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  background: #ffffff;
+  color: #222;
+  padding: 0 20px;
+  cursor: pointer;
+  margin-right: 9px;
+  user-select: none;
+}
+.wrapper .page-change .page-ul {
+  display: flex;
+  justify-content: center;
+}
+.wrapper .page-change .page-ul li {
+  margin-right: 9px;
+}
+.wrapper .page-change .page-ul li.page-btn {
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  background: #ffffff;
+  color: #222;
+  cursor: pointer;
+  user-select: none;
+}
+.wrapper .page-change .page-ul li.active {
+  background: #ffd84d;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+}
+.wrapper .app-download {
+  display: flex;
+  width: 100%;
+  height: 225px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffda44;
+}
+.wrapper .app-download .app {
+  display: flex;
+  width: 1040px;
+  height: 160px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .app-download .app .logo-img img {
+  display: block;
+  width: 270px;
+  height: 160px;
+}
+.wrapper .app-download .app .app-store {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper .app-download .app .app-store .store {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+.wrapper .app-download .app .app-store .store a {
+  margin-top: 1px;
+}
+.wrapper .app-download .app .app-store .QR-code {
+  width: 130px;
+  height: 130px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.wrapper .app-download .app .app-store .QR-code img {
+  display: block;
+  width: 110px;
+  height: 110px;
+}
+.wrapper .app-download .app .message img {
+  width: 300px;
+  height: 68px;
+}
+.wrapper .tips {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background-color: #222;
+}
+.wrapper .tips .tip-item-box {
+  display: flex;
+  flex-direction: row;
+  width: 1040px;
+  height: 34px;
+  justify-content: space-between;
+}
+.wrapper .tips .tip-item-box img {
+  height: 30px;
+}
+.wrapper .cooperation {
+  width: 1190px;
+  margin: 0 auto;
+}
+.wrapper .cooperation div:first-of-type {
+  padding-top: 7px;
+  border-bottom: 1px solid #ddd;
+}
+.wrapper .cooperation .top {
+  margin-bottom: 8px;
+}
+.wrapper .cooperation .co {
+  font-size: 0;
+  padding-bottom: 8px;
+}
+.wrapper .cooperation .co a:hover {
+  color: #f40;
+}
+.wrapper .cooperation .co span {
+  margin: 0 4px;
+  font-size: 12px;
+  line-height: 27px;
+  color: #6c6c6c;
+  font-family: Tahoma;
+}
+.wrapper .cooperation .co b {
+  margin: 0 3px;
+  font-size: 12px;
+  line-height: 27px;
+  color: #ddd;
+}
+.wrapper .cooperation .co .copyright {
+  margin-left: 30px;
+}
+.wrapper .cooperation .co .light-color {
+  color: #9c9c9c;
+}
+.wrapper .cooperation .co .police {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/police.png");
+  background-size: 100% 100%;
+}
+.wrapper .cooperation .co .last {
+  vertical-align: 5px;
+}
+.wrapper .fixed-link {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 132px;
+  height: 120px;
+  background-color: rgba(34, 34, 34, 0.8);
+}
+.wrapper .fixed-link .pop-icon {
+  width: 120px;
+  height: 120px;
+  margin-right: 12px;
+}
+.wrapper .fixed-link .pop-line {
+  position: absolute;
+  right: 0;
+  width: 12px;
+  height: 100%;
+  background-color: #ffda44;
+}
+.wrapper .fixed-link .pop-main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1040px;
+  height: 120px;
+  margin: 0 auto;
+}
+.wrapper .fixed-link .pop-main .pop-logo {
+  display: block;
+  width: 452px;
+  height: 80px;
+}
+.wrapper .fixed-link .pop-main .pop-download-ios,
+.wrapper .fixed-link .pop-main .pop-download-android {
+  display: block;
+  width: 180px;
+  height: 50px;
+}
+.wrapper .fixed-link .pop-main .pop-download-android {
+  margin-right: 150px;
+  cursor: pointer;
+}
+.wrapper .fixed-link .pop-main .pop-download-code {
+  position: absolute;
+  width: 114px;
+  height: 169px;
+  right: 0;
+  bottom: 12px;
+  background-image: url("../images/pop-download-code.png");
+  background-size: contain;
+}
+.wrapper .fixed-link .pop-main .pop-download-code .pop-QRcode {
+  position: absolute;
+  top: 72px;
+  left: 12px;
+  width: 85px;
+  height: 85px;
+}
+.wrapper .fixed-link .pop-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+}
+.unused {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.unused .message {
+  width: 650px;
+  height: 650px;
+}
+.unused .message .top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #ffffff;
+}
+.unused .message .top .close {
+  position: absolute;
+  right: 20px;
+  display: block;
+  color: #909399;
+  font-size: 22px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.unused .message .top .close:hover {
+  color: #56b3d1;
+}
+.unused .message .content {
+  padding: 40px 40px 0;
+  background-color: #ffda44;
+  display: flex;
+}
+.unused .message .content .img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.unused .message .content .img .phone {
+  width: 250px;
+  height: 473px;
+}
+.unused .message .content .code {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.unused .message .content .code .title {
+  width: 254px;
+  height: 50px;
+}
+.unused .message .content .code .download {
+  font-size: 16px;
+  color: #222;
+  margin: 40px 0 20px;
+}
+.unused .message .content .code .code-img {
+  width: 220px;
+  height: 220px;
+}
+#user-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#user-login .img {
+  position: absolute;
+  top: 60px;
+  margin-left: -40px;
+  width: 250px;
+  height: 200px;
+  background-image: url("../images/login-img.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+#user-login .content {
+  width: 350px;
+  height: 350px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 4px solid #ffd84d;
+}
+#user-login .content .form-item {
+  padding: 10px 30px;
+}
+#user-login .content .title {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+#user-login .content .user .error-message {
+  display: none;
+  font-size: 12px;
+  color: #ff4400;
+}
+#user-login .content .forget {
+  padding: 0 30px;
+  text-align: right;
+  font-size: 14px;
+  color: #34b74d;
+  cursor: pointer;
+}
+#user-login .content .remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#user-login .content .remember input {
+  margin: 3px 10px 0 0;
+}
+#user-login .content .input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #ececec;
+  border: 1px solid #eeeeee;
+}
+#user-login .content .login-btn {
+  width: 100%;
+  height: 40px;
+  background-color: #ffd84d;
+  border: none;
+}
